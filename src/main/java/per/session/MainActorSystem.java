@@ -15,7 +15,7 @@ public class MainActorSystem {
 		System.out.println("Actor systems created...");
 		final ActorRef<Home.Command> homeActor = system;
 		ActorRef<Home.ReadyToLeaveHome> finalActor = system.systemActorOf(readyToLeaveHomeBehavior(), "finalActor", Props.empty());
-		var leaveHome = new Home.LeaveHome("Abdulkerim", finalActor);
+		var leaveHome = new Home.LeaveHome("IT-Max", finalActor);
 		homeActor.tell(leaveHome);
 	}
 
