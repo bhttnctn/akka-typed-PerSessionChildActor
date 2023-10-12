@@ -30,8 +30,8 @@ public class Home {
 	private Behavior<Command> onLeaveHome(LeaveHome message) {
 		System.out.println("onLeaveHome");
 		ActorRef<Object> prepareActor = context.spawn(PrepareToLeaveHome.create(message.who, message.respondTo, keyCabinet, drawer), "leaving" + message.who);
-		keyCabinet.tell(new KeyCabinet.GetKeys("Abdulkerim", prepareActor));
-		drawer.tell(new Drawer.GetWallet("Abdulkerim", prepareActor));
+		keyCabinet.tell(new KeyCabinet.GetKeys("IT-Max", prepareActor));
+		drawer.tell(new Drawer.GetWallet("IT-Max", prepareActor));
 		return Behaviors.same();
 	}
 
